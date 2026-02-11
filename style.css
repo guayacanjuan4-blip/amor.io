@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #f5506c, #fc73ac);
+  font-family: 'Georgia', serif;
+  color: rgb(99, 3, 99);
+  overflow-x: hidden;
+}
+
+/* INTRO */
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 3.5em;
+  animation: fadeIn 3s ease;
+}
+
+.sub {
+  font-size: 1.4em;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+/* FOTO */
+.photo {
+  display: flex;
+  justify-content: center;
+  padding: 90px;
+}
+
+.photo img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(228, 13, 13, 0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* CARTA */
+.letter {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.letter h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.letter p {
+  font-size: 1.3em;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.4em;
+}
+
+/* CORAZONES */
+.hearts span {
+  position: fixed;
+  color: rgba(177, 0, 0, 0.6);
+  animation: hearts 3s linear infinite;
+}
+
+/* ANIMACIONES */
+@keyframes hearts {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
